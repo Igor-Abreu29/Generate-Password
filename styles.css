@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0f1114;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+
+body, input, button {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+}
+
+header {
+  font-size: 0.65rem;
+  color: gray;
+  margin-bottom: 1rem;
+}
+
+.generator-container {
+  height: 70vh;
+  max-width: 340px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.generator-result {
+  display: flex;
+  justify-content: center; 
+  background-color: #262a33;
+}
+
+.generator-result div {
+  max-width: 400px;
+  width: 100%;
+  font-size: 1.25rem;
+  height: 3.125rem;
+  background-color: transparent;
+  padding: 0 1rem;
+  border: 0;
+  outline: none;
+  color: #c5c4c4;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.generator-result div span {
+  color: #636262;
+  font-weight: bold;
+  font-size: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.generator-result button {
+  background-color: transparent;
+  border: 0;
+  font-size: 1.65rem;
+  cursor: pointer;
+  color: #82da8e;
+  height: 3.125rem;
+  max-width: 60px;
+  width: 100%;
+}
+
+.generator-content {
+  padding: 1.25rem;
+  background-color: #262a33;
+}
+
+.generator-charac {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: monospace;
+}
+
+.generator-charac span:nth-child(2) {
+  font-size: 1.75rem;
+  color: #82da8e;
+}
+
+input[type='range'] {
+  cursor: pointer;
+  -webkit-appearance: none;
+   border-radius: 5px;
+    background: #0f1114;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+input[type='range']::-webkit-slider-runnable-track,
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 1vh;
+  background: #121418;
+  border-radius: 5px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  margin-top: -0.5rem;
+  background-color: white;
+  border-radius: 60px;
+}
+
+.radios {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.radios div {
+  display: flex;
+  gap: 1rem;
+  font-family: monospace;
+}
+
+.strong-container {
+  background: #191b22;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.strong-container .strenght {
+  color: gray;
+  font-size: 1rem;
+  font-family: monospace;
+}
+.strong-container div {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.strong-container div span:nth-child(n + 2) {
+  border: 1px solid white;
+  width: 0.5rem;
+}
+
+.generator-content button {
+  border: none;
+  background-color: #82da8e;
+
+  font-family: monospace;
+  font-weight: bold;
+  
+  height: 3.125rem;
+  width: 100%;
+  margin-top: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  
+  cursor: pointer;
+}
+
+.generator-content button i {
+  font-size: 0.75rem;
+}

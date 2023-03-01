@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Password Generator</title>
+  </head>
+
+  <body>
+    <header>
+      <h2>Password Generator</h2>
+    </header>
+
+    <section class="generator-container">
+      <div class="generator-result">
+        <div>
+          <span id="password">
+          I5n9@Y20!
+        </span>
+        </div>
+        <button onclick="handleCopyContent()">
+          <i class="ph-copy"></i>
+        </button>
+      </div>
+
+      <div class="generator-content">
+        <div class="generator-charac">
+          <span>Character lenght</span>
+          <span id="count">0</span>
+        </div>
+
+        <input id="input-range" type="range" value="0" min="0" max="20" onchange="handleCharacterLenght()">
+
+        <div class="radios">
+          <div>
+            <input type="checkbox" id="bigger" onclick="handleTransformLettersBigger()">
+            <label>Include Uppercase Letters</label>
+          </div>
+
+          <div>
+            <input id="small" onclick="handleTransformLettersSmall()" type="checkbox">
+            <label for="">Include Lowercase Letters</label>
+          </div>
+
+          <div>
+            <input type="checkbox" id="numbers" onclick="handleWriteNumbers()">
+            <label>Include Numbers</label>
+          </div>
+
+          <div>
+            <input type="checkbox" id="symbols" onclick="handleWriteSymbols()">
+            <label for="symbols">Include Symbols</label>
+          </div>
+        </div>
+
+        <div class="strong-container">
+          <span class="strenght">STRENGHT</span>
+          <div class="password-strong-container">
+            <span class="information-password"></span>
+            <span class="easy"></span>
+            <span class="medium"></span>
+            <span class="strong"></span>
+            <span class="super-strong"></span>
+          </div>
+        </div>
+
+        <button onclick="generateRandomPassword()">
+          GENERATE
+          <i class="ph-arrow-right-bold"></i>
+        </button>
+      </div>
+    </section>
+
+      <script src="https://unpkg.com/phosphor-icons"></script>
+      <script src="./index.js"></script>
+  </body>
+
+</html>
