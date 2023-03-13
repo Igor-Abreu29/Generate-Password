@@ -2,6 +2,7 @@ let characters = ''
 
 const inputRange = document.getElementById("input-range")
 const count = document.getElementById('count')
+
 function handleCharacterLenght() {
   count.textContent = inputRange.value
 }
@@ -59,6 +60,7 @@ function generateString(length) {
     for ( let i = 0; i < length; i++ ) {
         result += characters.charAt(Math.floor(Math.random() * charactersLength))
     }
+    password.style.color = 'white'
 
     return result
 }
@@ -128,16 +130,17 @@ function generateRandomPassword() {
   console.log(characters)
 }
 
-// function handleRemoveContent() {
-//   informationPassword.innerHTML = ''
-//   easy.style.background = 'transparent';
-//   medium.style.background = 'transparent';
-//   strong.style.background = 'transparent'
-//   superStrong.style.background = 'transparent';
-//   password.textContent = 'I5n9@Y20!'
-//   inputRange.value = 0
-//   count.textContent = 0
-// }
+function handleRemoveContent() {
+  informationPassword.innerHTML = ''
+  easy.style.background = 'transparent';
+  medium.style.background = 'transparent';
+  strong.style.background = 'transparent'
+  superStrong.style.background = 'transparent';
+  password.textContent = 'I5n9@Y20!'
+  password.style.color = '#636262'
+  inputRange.value = 0
+  count.textContent = 0
+}
 
 function handleCopyContent() {
   navigator.clipboard.writeText(password.textContent)
